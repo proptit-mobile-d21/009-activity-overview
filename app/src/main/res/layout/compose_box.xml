@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fieldName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:textColor="@color/blue"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/box"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/round_box_blue"
+        android:fontFamily="@font/nunito_regular"
+        android:gravity="top"
+        android:padding="5dp"
+        android:textColor="@color/black" />
+
+</LinearLayout>
