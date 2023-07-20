@@ -6,3 +6,4 @@
 * Sau khi Login thành công, sẽ chuyển sang màn hình Home với chức năng gửi Email. Sau khi điền đầy đủ thông tin và nhấn nút Send thì sẽ chuyển qua ứng dụng Gmail để gửi Email với các thông tin vừa nhâp.
 * Giao diện Clone theo thiết kế từ [Figma](https://www.figma.com/file/tFvxY6Pewmwe4dDdtiVeUy/Modern-Login-UI--2.0-(Community)?type=design&node-id=0%3A1&mode=design&t=QLttcdeI4LarRGAc-1)
 
+  <img width="1393" alt="Modern Login UI  2 0 (Community)" src="https://github.com/proptit-mobile-d21/009-activity-overview/assets/84316258/33440da8-d50a-449c-a0c1-d1a0da2164a9">
