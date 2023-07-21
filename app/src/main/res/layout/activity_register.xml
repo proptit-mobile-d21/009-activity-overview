@@ -5,25 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tv_email"
+        android:layout_above="@+id/tv_full_name"
         android:layout_alignStart="@+id/tv_email"
-        android:text="Login"
-        android:layout_marginBottom="36dp"
+        android:text="Register"
+        android:layout_marginBottom="30dp"
         android:textSize="42dp"
         android:textColor="#03A9F4"
 
         />
     <TextView
+        android:id="@+id/tv_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_full_name"
+        android:layout_alignStart="@+id/et_email"
+        android:layout_marginBottom="5dp"
+        android:textColor="#03A9F4"
+        android:text="Full Name" />
+
+    <EditText
+        android:id="@+id/et_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/tv_email"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/corner_background" />
+
+    <TextView
         android:id="@+id/tv_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/et_email"
         android:layout_alignStart="@+id/et_email"
-        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+
+        android:layout_marginBottom="5dp"
         android:textColor="#03A9F4"
         android:text="Email" />
 
@@ -31,7 +51,7 @@
         android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/tv_email"
         android:layout_marginHorizontal="50dp"
         android:background="@drawable/corner_background" />
 
@@ -54,20 +74,10 @@
         android:layout_height="50dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:layout_below="@+id/et_password"
-        android:layout_alignEnd="@+id/et_password"
-        android:textColor="#03A9F4"
-        android:layout_marginTop="10dp"
-        />
-
-    <TextView
         android:id="@+id/tv_newHere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Here?"
+        android:text="Already Member?"
         android:layout_alignParentBottom="true"
         android:textColor="@color/white"
         android:layout_marginBottom="24dp"
@@ -76,26 +86,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="Login"
         android:textColor="@color/white"
         android:layout_toRightOf="@+id/tv_newHere"
         android:layout_alignBottom="@+id/tv_newHere"
         android:textStyle="bold"
         android:layout_marginStart="5dp"
         />
-   <Button
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:paddingHorizontal="42dp"
-       android:paddingVertical="16dp"
-       android:text="Login"
-       android:textColor="@color/white"
-       android:layout_alignParentEnd="true"
-       android:layout_alignParentBottom="true"
-       android:layout_marginEnd="10dp"
-       android:layout_marginBottom="24dp"
-       android:background="@drawable/button_background"
-       />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="42dp"
+        android:paddingVertical="16dp"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_background"
+        />
 
 
 
