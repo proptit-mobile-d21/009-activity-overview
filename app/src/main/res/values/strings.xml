@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Activity Overview</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="new_here">New Here? Register</string>
+    <string name="already_mem">Already memeber? Login</string>
+    <string name="send">Send</string>
+    <string name="to">To</string>
+    <string name="subject">Subject</string>
+    <string name="compose_mail">Compose email</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="forgot_pass">Forgot Password?</string>
 </resources>
