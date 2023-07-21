@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_height="match_parent" 
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compose"
+        android:textColor="#03A9F4"
+        android:textSize="42dp"
+        android:textStyle="bold"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:textColor="#03A9F4"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="48dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/corner_background"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject"
+        android:textColor="#03A9F4"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/corner_background"
+        android:layout_marginHorizontal="50dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compose email"
+        android:textColor="#03A9F4"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/corner_background"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="48dp"
+        android:paddingVertical="24dp"
+        android:text="Send"
+        android:textColor="@color/white"
+        android:background="@drawable/button_backgound_2"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        />
+</LinearLayout>
