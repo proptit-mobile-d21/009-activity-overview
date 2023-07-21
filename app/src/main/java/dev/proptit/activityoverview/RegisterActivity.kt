@@ -18,5 +18,13 @@ class RegisterActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        binding.btnToLogin.setOnClickListener {
+            Intent(this, LoginActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
+
+
 }

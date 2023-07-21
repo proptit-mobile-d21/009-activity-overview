@@ -112,6 +112,7 @@
         app:layout_constraintLeft_toRightOf="@+id/tvNew" />
 
     <TextView
+        android:id="@+id/btnToLogin"
         android:layout_width="144dp"
         android:layout_height="60dp"
         android:layout_marginRight="25dp"
