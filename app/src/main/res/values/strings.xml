@@ -12,4 +12,6 @@
     <string name="email">Email</string>
     <string name="pass">Password</string>
     <string name="forgot_pass">Forgot Password?</string>
+    <string name="compose">Compose</string>
+    <string name="compose_mail">Compose email</string>
 </resources>
