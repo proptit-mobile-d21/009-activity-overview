@@ -21,9 +21,9 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
-            if(check){
-
-            }
+//            if(check){
+//
+//            }
         }
     }
 }

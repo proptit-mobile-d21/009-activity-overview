@@ -6,4 +6,11 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="new_here">New Here?</string>
     <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="already_member">Already Member?</string>
+    <string name="compose">Compose</string>
+    <string name="to">To</string>
+    <string name="subject">Subject</string>
+    <string name="compose_email">Compose email</string>
+    <string name="send">Send</string>
 </resources>
