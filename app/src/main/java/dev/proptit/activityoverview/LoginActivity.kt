@@ -29,10 +29,11 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        val extras = intent.extras
-        if (extras != null) {
-            binding.editEmail.setText(extras.getString("email"))
-            binding.editPassword.setText(extras.getString("password"))
+        val email: String? = intent.getStringExtra("email")
+        val password: String? = intent.getStringExtra("password")
+        if (email != null && password != null) {
+            binding.editEmail.setText(email)
+            binding.editPassword.setText(password)
         }
 
     }

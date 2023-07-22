@@ -28,9 +28,8 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "không được để trống thông tin", Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(this, LoginActivity::class.java)
-                val bundle = Bundle()
-                bundle.putString("email", email)
-                bundle.putString("password", password)
+                intent.putExtra("email", email)
+                intent.putExtra("password", password)
                 startActivity(intent)
             }
         }
