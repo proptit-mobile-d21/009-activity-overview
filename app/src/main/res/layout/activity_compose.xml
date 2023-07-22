@@ -20,13 +20,11 @@
         app:layout_constraintVertical_bias="0">
 
         <TextView
+            style="@style/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@string/compose"
-            android:textColor="@color/blue"
-            android:textSize="36sp" />
+            android:text="@string/compose" />
 
         <include
             android:id="@+id/toBox"
@@ -50,16 +48,12 @@
             android:layout_marginBottom="60dp" />
 
         <TextView
+            android:id="@+id/btnSend"
+            style="@style/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_box_white"
-            android:fontFamily="@font/nunito_regular"
-            android:paddingHorizontal="24dp"
             android:layout_gravity="center"
-            android:paddingVertical="12dp"
-            android:text="@string/send"
-            android:textColor="@color/white"
-            android:textSize="24sp"/>
+            android:text="@string/send" />
 
     </LinearLayout>
 

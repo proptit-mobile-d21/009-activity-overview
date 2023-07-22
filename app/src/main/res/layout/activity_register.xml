@@ -21,13 +21,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            style="@style/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@string/register"
-            android:textColor="@color/blue"
-            android:textSize="36sp" />
+            android:text="@string/register" />
 
         <include
             android:id="@+id/fullNameBox"
@@ -51,13 +49,11 @@
             android:layout_marginBottom="24dp" />
 
         <TextView
+            style="@style/bodyBlue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@string/forgot_pass"
-            android:textColor="@color/blue"
-            android:textSize="14sp" />
+            android:text="@string/forgot_pass" />
 
     </LinearLayout>
 
@@ -73,12 +69,10 @@
 
         <TextView
             android:id="@+id/newHereText"
+            style="@style/bodyRegularWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_regular"
             android:text="@string/already_member"
-            android:textColor="@color/white"
-            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -86,27 +80,21 @@
 
         <TextView
             android:id="@+id/registerText"
+            style="@style/bodyBoldWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:fontFamily="@font/nunito_bold"
             android:text="@string/login"
-            android:textColor="@color/white"
-            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/newHereText"
             app:layout_constraintStart_toEndOf="@+id/newHereText"
             app:layout_constraintTop_toTopOf="@id/newHereText" />
 
         <TextView
+            android:id="@+id/btnRegister"
+            style="@style/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_box_white"
-            android:fontFamily="@font/nunito_regular"
-            android:paddingHorizontal="24dp"
-            android:paddingVertical="12dp"
             android:text="@string/register"
-            android:textColor="@color/white"
-            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@id/registerText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1"

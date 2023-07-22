@@ -7,19 +7,14 @@
 
     <TextView
         android:id="@+id/fieldName"
+        style="@style/bodyBlue"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_regular"
-        android:textColor="@color/blue"
-        android:textSize="14sp" />
+        android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/box"
+        style="@style/box"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/round_box_blue"
-        android:fontFamily="@font/nunito_regular"
-        android:padding="5dp"
-        android:textColor="@color/black" />
+        android:layout_height="40dp" />
 
 </LinearLayout>
