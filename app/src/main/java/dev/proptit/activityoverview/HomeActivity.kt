@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
             if (receiver.isEmpty() || subject.isEmpty() || composeMail.isEmpty()) {
                 Toast.makeText(this, "Không được để trống thông tin", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Hoàn tất tác vụ!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Hoàn tất tác vụ!", Toast.LENGTH_SHORT).show()
             }
         }
     }

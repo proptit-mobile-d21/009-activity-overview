@@ -25,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Không được để trống thông tin", Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
             }
         }
 
