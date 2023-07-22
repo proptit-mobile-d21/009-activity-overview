@@ -1,5 +1,6 @@
 package dev.proptit.activityoverview
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -38,5 +39,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, RegisterActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE_REGISTER_EMAIL)
         }
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(REQUEST_CODE_REGISTER_EMAIL == requestCode && resultCode == Activity.RESULT_OK){
+            if (data != null) {
+                val email = data.getStringExtra("email")
+                val password = data.getStringExtra("password")
+                binding.etEmail.setText(data.getStringExtra("email"))
+                binding.etPassword.setText(data.getStringExtra("password"))
+            }
+        }
+
     }
 }
