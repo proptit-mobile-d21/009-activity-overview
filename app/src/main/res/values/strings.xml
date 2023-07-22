@@ -5,4 +5,7 @@
     <string name="new_here">New Here? Register</string>
     <string name="already_mem">Already memeber? Login</string>
     <string name="send">Send</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="Passforget">Forgot Password?</string>
 </resources>
