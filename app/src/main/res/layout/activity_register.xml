@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:paddingHorizontal="32dp"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegisterActivity">
 
     <LinearLayout
-        android:id="@+id/loginArea"
+        android:id="@+id/registerArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -17,16 +17,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
+        app:layout_constraintEnd_toEndOf="parent"
+        >
         <TextView
-            android:id="@+id/loginText"
+            android:id="@+id/registerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login"
+            android:text="@string/register"
             android:textSize="40dp"
             android:textColor="@color/blue"
             android:fontFamily="@font/nunito_bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fullname"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:fontFamily="@font/nunito_regular"
+            android:layout_marginTop="24dp"
+            />
+        <EditText
+            android:id="@+id/namebox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_shape"
+            android:hint="Enter your full name here"
+            android:layout_marginTop="4dp"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -38,7 +55,7 @@
             android:layout_marginTop="24dp"
             />
         <EditText
-            android:id="@+id/emailbox"
+            android:id="@+id/emailbox2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_shape"
@@ -55,31 +72,22 @@
             android:layout_marginTop="16dp"
             />
         <EditText
-            android:id="@+id/passwordbox"
+            android:id="@+id/passwordbox2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_shape"
             android:hint="Enter your password here"
             android:layout_marginTop="4dp"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="@string/Passforget"
-            android:fontFamily="@font/nunito_bold"
-            android:textColor="@color/blue"
-            android:textSize="16dp"
-            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/newsection"
+        android:id="@+id/membersection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@+id/loginArea"
+        app:layout_constraintTop_toBottomOf="@+id/registerArea"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="horizontal"
@@ -89,14 +97,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/neww"
+            android:text="@string/member"
             android:textSize="16dp"
             android:textColor="@color/white"
             android:fontFamily="@font/nunito_regular"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register"
+            android:text="@string/login"
             android:textSize="16dp"
             android:layout_marginLeft="4dp"
             android:fontFamily="@font/nunito_bold"
@@ -110,14 +118,14 @@
         android:gravity="center"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginArea"
-        app:layout_constraintBottom_toBottomOf="@id/newsection"
-        app:layout_constraintStart_toEndOf="@id/newsection"
+        app:layout_constraintTop_toBottomOf="@+id/registerArea"
+        app:layout_constraintBottom_toBottomOf="@id/membersection"
+        app:layout_constraintStart_toEndOf="@id/membersection"
         android:background="@drawable/rectangle_4"
         android:textSize="30dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="104dp"
         android:fontFamily="@font/nunito_regular"
         android:text="@string/login"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+</androidx.constraintlayout.widget.ConstraintLayout>

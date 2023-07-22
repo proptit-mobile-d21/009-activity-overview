@@ -8,4 +8,12 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="Passforget">Forgot Password?</string>
+    <string name="neww">New Here?</string>
+    <string name="fullname">Full Name</string>
+    <string name="member">Already Member?</string>
+    <string name="compose">Compose</string>
+    <string name="to">To</string>
+    <string name="subject">Subject</string>
+    <string name="compose_e">Compose email</string>
+
 </resources>
