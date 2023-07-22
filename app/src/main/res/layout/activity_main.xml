@@ -53,7 +53,8 @@
         android:background="@drawable/corner_background"
         android:layout_marginHorizontal="50dp"
         android:paddingHorizontal="10dp"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        android:inputType="textPassword"/>
 
     <TextView
         android:layout_width="wrap_content"

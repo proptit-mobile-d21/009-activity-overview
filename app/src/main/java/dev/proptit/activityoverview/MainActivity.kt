@@ -41,8 +41,17 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
-                val intent = Intent(this@MainActivity, SendEmailActivity::class.java)
-                startActivity(intent)
+                if (User.checkUser(
+                        binding.etEmail.text.toString(),
+                        binding.etPassword.text.toString()
+                    )
+                ) {
+                    val intent = Intent(this@MainActivity, SendEmailActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this@MainActivity, "Login failed", Toast.LENGTH_SHORT).show()
+                }
+
             }
 
         }

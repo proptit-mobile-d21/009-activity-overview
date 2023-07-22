@@ -24,14 +24,20 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please enter your email and password",Toast.LENGTH_SHORT).show()
             }
             else{
-                val intent = Intent().apply {
-                    putExtra("full_name", name)
-                    putExtra("email", email)
-                    putExtra("password", password)
+                if(User.addUser(email, password)){
+                    Toast.makeText(this, "Register successfully", Toast.LENGTH_SHORT).show()
+                    val intent = Intent().apply {
+                        putExtra("full_name", name)
+                        putExtra("email", email)
+                        putExtra("password", password)
+                    }
+                    setResult(Activity.RESULT_OK, intent )
+                    finish()
                 }
-                Toast.makeText(this, "Psdword",Toast.LENGTH_SHORT).show()
-                setResult(Activity.RESULT_OK, intent )
-                finish()
+                else{
+                    Toast.makeText(this, "Register failed", Toast.LENGTH_SHORT).show()
+                }
+
             }
 
         }
