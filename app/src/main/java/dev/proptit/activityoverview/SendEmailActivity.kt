@@ -20,7 +20,7 @@ class SendEmailActivity : AppCompatActivity() {
             val receiver = binding.etEmailReceiver.text.toString()
             val subject = binding.etSubject.text.toString()
             val body = binding.etEmailBody.text.toString()
-            if(receiver.equals("") || subject.equals("") || body.equals("")){
+            if(receiver == "" || subject == "" || body == ""){
                 Toast.makeText(this@SendEmailActivity, "Please enter all fields", Toast.LENGTH_SHORT).show()
             }
             else{

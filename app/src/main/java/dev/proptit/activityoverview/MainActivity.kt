@@ -17,13 +17,11 @@ class MainActivity : AppCompatActivity() {
             val data = it.data
             if (data != null) {
                 val email = data.getStringExtra("email")
-                val password = data.getStringExtra("password")
                 binding.etEmail.setText(email)
-                binding.etPassword.setText(password)
             }
         }
     }
-    private val REQUEST_CODE_REGISTER_EMAIL = 1
+   // private val REQUEST_CODE_REGISTER_EMAIL = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
