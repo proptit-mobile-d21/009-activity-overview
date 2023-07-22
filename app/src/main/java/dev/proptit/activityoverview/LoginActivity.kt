@@ -35,7 +35,5 @@ class LoginActivity : AppCompatActivity() {
             binding.emailEditText.setText( extras.getString("Email"))
             binding.passwordEditText.setText(extras.getString("Password"))
         }
-
-
     }
 }

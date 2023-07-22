@@ -12,7 +12,10 @@
         android:layout_height="wrap_content"
         android:text="@string/compose"
         android:layout_marginTop="48dp"
-        android:layout_marginStart="24dp"/>
+        android:layout_marginStart="24dp"
+        android:textColor="@color/dark_blue"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/compose_error_text"
@@ -26,6 +29,17 @@
         android:textColor="@color/red"/>
 
     <TextView
+        android:id="@+id/compose_success_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="@string/compose_success"
+        android:layout_below="@id/compose_heading"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/red"/>
+
+    <TextView
         android:id="@+id/to_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +47,8 @@
         android:layout_below="@id/compose_heading"
         android:layout_marginTop="36dp"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="2dp"/>
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/dark_blue"/>
 
     <EditText
         android:id="@+id/to_edit_text"
@@ -52,7 +67,8 @@
         android:layout_below="@id/to_edit_text"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="2dp"/>
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/dark_blue"/>
 
     <EditText
         android:id="@+id/subject_edit_text"
@@ -71,7 +87,8 @@
         android:layout_below="@id/subject_edit_text"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="2dp"/>
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/dark_blue"/>
 
     <EditText
         android:id="@+id/compose_email_edit_text"
@@ -84,14 +101,16 @@
 
 
     <TextView
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnSend"
         android:layout_width="96dp"
         android:layout_height="48dp"
         android:gravity="center"
-        android:text="@string/register"
+        android:text="@string/send"
         android:layout_below="@id/compose_email_edit_text"
         android:background="@drawable/button_shape_black_stroke"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="80dp" />
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
 
 </RelativeLayout>
