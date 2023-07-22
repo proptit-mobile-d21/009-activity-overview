@@ -7,10 +7,22 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import dev.proptit.activityoverview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val laucher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        if (it.resultCode == Activity.RESULT_OK) {
+            val data = it.data
+            if (data != null) {
+                val email = data.getStringExtra("email")
+                val password = data.getStringExtra("password")
+                binding.etEmail.setText(email)
+                binding.etPassword.setText(password)
+            }
+        }
+    }
     private val REQUEST_CODE_REGISTER_EMAIL = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,21 +49,22 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvRegister.setOnClickListener {
             val intent = Intent(this@MainActivity, RegisterActivity::class.java)
-            startActivityForResult(intent, REQUEST_CODE_REGISTER_EMAIL)
+//            startActivityForResult(intent, REQUEST_CODE_REGISTER_EMAIL)
+            laucher.launch(intent)
         }
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if(REQUEST_CODE_REGISTER_EMAIL == requestCode && resultCode == Activity.RESULT_OK){
-            if (data != null) {
-                val email = data.getStringExtra("email")
-                val password = data.getStringExtra("password")
-                binding.etEmail.setText(data.getStringExtra("email"))
-                binding.etPassword.setText(data.getStringExtra("password"))
-            }
-        }
-
-    }
+//    @Deprecated("Deprecated in Java")
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if(REQUEST_CODE_REGISTER_EMAIL == requestCode && resultCode == Activity.RESULT_OK){
+//            if (data != null) {
+//                val email = data.getStringExtra("email")
+//                val password = data.getStringExtra("password")
+//                binding.etEmail.setText(email)
+//                binding.etPassword.setText(password)
+//            }
+//        }
+//
+//    }
 }

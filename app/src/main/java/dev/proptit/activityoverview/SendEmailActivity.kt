@@ -1,5 +1,6 @@
 package dev.proptit.activityoverview
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -27,9 +28,10 @@ class SendEmailActivity : AppCompatActivity() {
             }
         }
     }
+    @SuppressLint("QueryPermissionsNeeded")
     private fun sendEmail(receiver: String, subject: String, body: String){
         val intent = Intent(Intent.ACTION_SEND)
-        intent.setData(Uri.parse("mailto:"))
+        intent.data = Uri.parse("mailto:")
         intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(receiver))
         intent.putExtra(Intent.EXTRA_SUBJECT, subject)
         intent.putExtra(Intent.EXTRA_TEXT, body)
