@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/text_compose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:text="Compose"
+        android:textColor="#2F80ED"
+        android:textSize="36dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_compose"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:text="To"
+        android:textColor="#2F80ED" />
+
+    <EditText
+        android:id="@+id/edit_to"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/text_to"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_blue"
+        android:paddingHorizontal="8dp" />
+
+    <TextView
+        android:id="@+id/text_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_to"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Subject"
+        android:textColor="#2F80ED" />
+
+    <EditText
+        android:id="@+id/edit_subject"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/text_subject"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_blue"
+        android:paddingHorizontal="8dp" />
+
+    <TextView
+        android:id="@+id/text_composeEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_subject"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Compose Email"
+        android:textColor="#2F80ED" />
+
+    <EditText
+        android:id="@+id/edit_composeEmail"
+        android:layout_width="match_parent"
+        android:layout_height="184dp"
+        android:layout_below="@id/text_composeEmail"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_blue"
+        android:paddingHorizontal="8dp" />
+
+    <Button
+        android:id="@+id/btn_composeEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_composeEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_black"
+        android:text="Send"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
