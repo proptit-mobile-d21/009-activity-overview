@@ -14,18 +14,35 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+//        binding.btnToEmail.setOnClickListener {
+//            val intent = Intent(Intent.ACTION_VIEW)
+//            val toMail = binding.etTo.text.toString()
+//            val subject = binding.etSubject.text.toString()
+//            val content = binding.etContent.text.toString()
+//            val data = Uri.parse(
+//                "mailto:${toMail}?subject=" + Uri.encode(subject) + "&body=" + Uri.encode(
+//                    content
+//                )
+//            )
+//            intent.data = data
+//            startActivity(intent)
+//        }
         binding.btnToEmail.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
+            val intent = Intent(Intent.ACTION_SENDTO)
             val toMail = binding.etTo.text.toString()
             val subject = binding.etSubject.text.toString()
             val content = binding.etContent.text.toString()
-            val data = Uri.parse(
-                "mailto:${toMail}?subject=" + Uri.encode(subject) + "&body=" + Uri.encode(
-                    content
-                )
-            )
-            intent.data = data
+            intent.data = Uri.parse("mailto:")
+            intent.putExtra(Intent.EXTRA_EMAIL, toMail)
+            intent.putExtra(Intent.EXTRA_SUBJECT, subject)
+            intent.putExtra(Intent.EXTRA_TEXT, content)
             startActivity(intent)
+
+//            val intent = Intent(Intent.ACTION_SEND)
+//            intent.type = "message/rfc822"
+//            intent.putExtra(Intent.EXTRA_SUBJECT, "This is a test email.")
+//            intent.putExtra(Intent.EXTRA_TEXT, "This is the body of the email.")
+//            startActivity(Intent.createChooser(intent, "Choose an email app:"))
         }
     }
 }
