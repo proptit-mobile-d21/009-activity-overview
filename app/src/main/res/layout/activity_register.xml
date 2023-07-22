@@ -74,7 +74,7 @@
 
 
     <TextView
-        android:id="@+id/new_here_text"
+        android:id="@+id/already_member_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/already_member"
@@ -83,23 +83,23 @@
         android:layout_marginStart="8dp"/>
 
     <TextView
-        android:id="@+id/register"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:layout_below="@id/password_edit_text"
-        android:layout_toRightOf="@id/new_here_text"
-        android:layout_alignTop="@id/new_here_text"
+        android:layout_toRightOf="@id/already_member_text"
+        android:layout_alignTop="@id/already_member_text"
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnRegister"
         android:layout_width="96dp"
         android:layout_height="48dp"
         android:gravity="center"
         android:text="@string/register"
         android:layout_below="@id/password_edit_text"
-        android:layout_toRightOf="@id/register"
+        android:layout_toRightOf="@id/login"
         android:background="@drawable/button_shape"
         android:layout_marginStart="160dp"
         android:layout_marginTop="176dp" />

@@ -1,9 +1,8 @@
 package dev.proptit.activityoverview
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatActivity
 import dev.proptit.activityoverview.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -14,16 +13,25 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.register.setOnClickListener {
-            val intent = Intent(this, RegisterAcitivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         binding.btnLogin.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
-//            if(check){
-//
-//            }
+            if(AccountManager.checkLogin(email, password)){
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+            }
         }
+
+        val extras = intent.extras
+        if(extras != null){
+            binding.emailEditText.setText( extras.getString("Email"))
+            binding.passwordEditText.setText(extras.getString("Password"))
+        }
+
+
     }
 }
