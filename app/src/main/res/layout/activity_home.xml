@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".HomeActivity">
 
     <TextView
         android:id="@+id/compose_heading"
@@ -13,6 +13,17 @@
         android:text="@string/compose"
         android:layout_marginTop="48dp"
         android:layout_marginStart="24dp"/>
+
+    <TextView
+        android:id="@+id/compose_error_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="@string/compose_error"
+        android:layout_below="@id/compose_heading"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/red"/>
 
     <TextView
         android:id="@+id/to_text"
@@ -73,7 +84,7 @@
 
 
     <TextView
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnRegister"
         android:layout_width="96dp"
         android:layout_height="48dp"
         android:gravity="center"

@@ -2,6 +2,7 @@ package dev.proptit.activityoverview
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import dev.proptit.activityoverview.databinding.ActivityLoginBinding
 
@@ -23,6 +24,9 @@ class LoginActivity : AppCompatActivity() {
             if(AccountManager.checkLogin(email, password)){
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
+            }
+            else{
+                binding.loginErrorText.visibility = View.VISIBLE
             }
         }
 

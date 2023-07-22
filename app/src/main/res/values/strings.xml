@@ -13,4 +13,7 @@
     <string name="subject">Subject</string>
     <string name="compose_email">Compose email</string>
     <string name="send">Send</string>
+    <string name="login_error">Email/Password is not correct</string>
+    <string name="register_error">Full Name/Email/Password is not correct</string>
+    <string name="compose_error">To/Subject/Compose email is not correct</string>
 </resources>

@@ -3,6 +3,7 @@ package dev.proptit.activityoverview
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import dev.proptit.activityoverview.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
@@ -28,6 +29,9 @@ class RegisterActivity : AppCompatActivity() {
                 intent.putExtra("Email", email)
                 intent.putExtra("Password", password)
                 startActivity(intent)
+            }
+            else{
+                binding.registerErrorText.visibility = View.VISIBLE
             }
         }
     }
