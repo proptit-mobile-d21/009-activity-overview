@@ -7,13 +7,86 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/main_compose_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="38dp"
+        style="@style/text_header_2"
+        android:text="@string/compose"/>
 
+    <TextView
+        android:id="@+id/main_to_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_compose_txt"
+        app:layout_constraintLeft_toLeftOf="@id/main_compose_txt"
+        android:layout_marginTop="38dp"
+        style="@style/text_normal"
+        android:text="@string/to" />
+
+    <EditText
+        android:id="@+id/main_to_edit"
+        android:layout_width="309dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/main_to_txt"
+        app:layout_constraintLeft_toLeftOf="@id/main_to_txt"
+        android:background="@drawable/rounded_edit_text"
+        android:paddingHorizontal="12dp"
+        tools:text="lordierclaw@gmail.com"/>
+
+    <TextView
+        android:id="@+id/main_subject_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_to_edit"
+        app:layout_constraintLeft_toLeftOf="@id/main_to_edit"
+        android:layout_marginTop="18dp"
+        style="@style/text_normal"
+        android:text="@string/subject" />
+
+    <EditText
+        android:id="@+id/main_subject_edit"
+        android:layout_width="309dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/main_subject_txt"
+        app:layout_constraintLeft_toLeftOf="@id/main_subject_txt"
+        android:background="@drawable/rounded_edit_text"
+        android:paddingHorizontal="12dp"
+        tools:text="lorem ipsum"/>
+
+    <TextView
+        android:id="@+id/main_compose_email_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_subject_edit"
+        app:layout_constraintLeft_toLeftOf="@id/main_subject_edit"
+        android:layout_marginTop="18dp"
+        style="@style/text_normal"
+        android:text="@string/compose_email" />
+
+    <EditText
+        android:id="@+id/main_compose_email_edit"
+        android:layout_width="309dp"
+        android:layout_height="192dp"
+        app:layout_constraintTop_toBottomOf="@id/main_compose_email_txt"
+        app:layout_constraintLeft_toLeftOf="@id/main_compose_email_txt"
+        android:background="@drawable/rounded_edit_text"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="12dp"
+        tools:text="lorem ipsum"
+        android:gravity="start|top"/>
+
+    <TextView
+        android:id="@+id/login_btn"
+        android:layout_width="144dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/main_compose_email_edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="80dp"
+        style="@style/button_primary"
+        android:text="@string/send"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
