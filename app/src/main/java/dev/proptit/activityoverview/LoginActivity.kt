@@ -2,13 +2,14 @@ package dev.proptit.activityoverview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import dev.proptit.activityoverview.databinding.ActivityMainBinding
+import dev.proptit.activityoverview.databinding.ActivityLoginBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
     }
+
 }
