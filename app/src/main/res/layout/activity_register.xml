@@ -101,18 +101,21 @@
             android:textSize="16dp"
             android:textColor="@color/white"
             android:fontFamily="@font/nunito_regular"/>
+
         <TextView
+            android:id="@+id/btnlogin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textSize="16dp"
+            android:layout_height="10dp"
             android:layout_marginLeft="4dp"
             android:fontFamily="@font/nunito_bold"
-            android:textColor="@color/white"/>
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/btnregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -123,9 +126,10 @@
         app:layout_constraintStart_toEndOf="@id/membersection"
         android:background="@drawable/rectangle_4"
         android:textSize="30dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="104dp"
         android:fontFamily="@font/nunito_regular"
-        android:text="@string/login"/>
+
+        android:text="@string/register"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

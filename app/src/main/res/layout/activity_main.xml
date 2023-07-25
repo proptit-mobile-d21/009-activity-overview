@@ -61,6 +61,7 @@
             android:background="@drawable/rectangle_shape"
             android:hint="Enter your password here"
             android:layout_marginTop="4dp"
+
             />
         <TextView
             android:layout_width="wrap_content"
@@ -94,6 +95,7 @@
             android:textColor="@color/white"
             android:fontFamily="@font/nunito_regular"/>
         <TextView
+            android:id="@+id/btnregister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register"
@@ -105,6 +107,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/btnlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"

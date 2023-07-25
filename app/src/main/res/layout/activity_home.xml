@@ -1,119 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="40dp">
 
-    <TextView
-        android:id="@+id/compose_heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/compose"
-        android:layout_marginTop="48dp"
-        android:layout_marginStart="24dp"
-        android:textColor="@color/blue"
-        android:textSize="40dp"
-        android:fontFamily="@font/nunito_bold"/>
-
-    <TextView
-        android:id="@+id/compose_error_text"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:text="Error"
-        android:layout_below="@id/compose_heading"
-        android:gravity="center"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/blue"/>
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/compose_success_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:text="Success"
-        android:layout_below="@id/compose_heading"
-        android:gravity="center"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/blue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/compose"
+            android:textSize="40dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/blue" />
 
-    <TextView
-        android:id="@+id/to_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to"
-        android:layout_below="@id/compose_heading"
-        android:layout_marginTop="36dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="2dp"
-        android:textColor="@color/blue"
-        android:fontFamily="@font/nunito_regular"
-        android:textSize="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="16dp"
+            android:layout_marginTop="56dp"/>
 
-    <EditText
-        android:id="@+id/to_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:background="@drawable/rectangle_shape"
-        android:layout_below="@id/to_text"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="56dp"/>
+        <EditText
+            android:id="@+id/tobox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_shape"
+            android:hint="Enter an email"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subject"
+            android:textSize="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/nunito_regular"
+            android:textColor="@color/blue"/>
+        <EditText
+            android:id="@+id/subjectbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_shape"
+            android:hint="Enter the subject"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/compose_e"
+            android:textSize="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/nunito_regular"
+            android:textColor="@color/blue"/>
+        <EditText
+            android:id="@+id/composebox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_8"
+            android:layout_gravity="center_vertical"/>
 
-    <TextView
-        android:id="@+id/subject_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/subject"
-        android:layout_below="@id/to_edit_text"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="2dp"
-        android:textColor="@color/blue"/>
+        <TextView
+            android:id="@+id/btnsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_4"
+            android:text="@string/send"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/nunito_regular"/>
 
-    <EditText
-        android:id="@+id/subject_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:background="@drawable/rectangle_shape"
-        android:layout_below="@id/subject_text"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="56dp"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/compose_email_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/compose_e"
-        android:layout_below="@id/subject_edit_text"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="2dp"
-        android:textColor="@color/blue"/>
-
-    <EditText
-        android:id="@+id/compose_email_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="@drawable/rectangle_8"
-        android:layout_below="@id/compose_email_text"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="56dp"/>
-
-
-    <TextView
-        android:id="@+id/btnSend"
-        android:layout_width="96dp"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:text="@string/send"
-        android:layout_below="@id/compose_email_edit_text"
-        android:background="@drawable/rectangle_4"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="80dp"
-        android:textColor="@color/white"
-
-        android:textSize="20sp"/>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
