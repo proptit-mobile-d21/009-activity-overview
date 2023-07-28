@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.google.gson.Gson
 import dev.proptit.activityoverview.databinding.ActivityMainBinding
 import dev.proptit.activityoverview.section.account.Account
+import dev.proptit.activityoverview.share.IntentExtra
 
 class MainActivity : AppCompatActivity() {
 

@@ -9,6 +9,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.google.gson.Gson
 import dev.proptit.activityoverview.databinding.ActivityLoginBinding
 import dev.proptit.activityoverview.section.manager.AccountManager
+import dev.proptit.activityoverview.share.IntentExtra
 
 
 class LoginActivity : AppCompatActivity() {

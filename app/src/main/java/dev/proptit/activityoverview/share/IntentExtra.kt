@@ -1,4 +1,4 @@
-package dev.proptit.activityoverview.screen
+package dev.proptit.activityoverview.share
 
 object IntentExtra {
     const val USER_EMAIL: String = "user_email"

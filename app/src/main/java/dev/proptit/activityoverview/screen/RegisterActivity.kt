@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Toast
 import dev.proptit.activityoverview.databinding.ActivityRegisterBinding
 import dev.proptit.activityoverview.section.manager.AccountManager
+import dev.proptit.activityoverview.share.IntentExtra
 
 class RegisterActivity : AppCompatActivity() {
 
