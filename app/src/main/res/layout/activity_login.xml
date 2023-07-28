@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".screen.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,6 +44,7 @@
             android:textSize="14dp" />
 
         <EditText
+            android:id="@+id/etAccount"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -60,6 +61,7 @@
             android:textSize="14dp" />
 
         <EditText
+            android:id="@+id/etPass"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
