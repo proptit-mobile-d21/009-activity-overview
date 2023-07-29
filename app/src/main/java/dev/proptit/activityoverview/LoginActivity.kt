@@ -1,8 +1,11 @@
 package dev.proptit.activityoverview
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import dev.proptit.activityoverview.databinding.ActivityLoginBinding
 
@@ -26,12 +29,12 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             else{
-                binding.loginErrorText.visibility = View.VISIBLE
+                Toast.makeText(this, "Email/Password is not correct", Toast.LENGTH_LONG).show()
             }
         }
 
         val extras = intent.extras
-        if(extras != null){
+        extras?.let {
             binding.emailEditText.setText( extras.getString("Email"))
             binding.passwordEditText.setText(extras.getString("Password"))
         }

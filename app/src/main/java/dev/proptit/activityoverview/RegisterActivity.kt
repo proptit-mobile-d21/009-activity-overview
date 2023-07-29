@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import dev.proptit.activityoverview.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
@@ -31,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             else{
-                binding.registerErrorText.visibility = View.VISIBLE
+                Toast.makeText(this, "Full Name/Email/Password is not correct", Toast.LENGTH_LONG).show()
             }
         }
     }
