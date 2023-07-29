@@ -7,11 +7,20 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/edt_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:layout_marginTop="200dp"
+        android:layout_marginHorizontal="48dp"
+        />
+    <EditText
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/edt_full_name"
         android:layout_marginHorizontal="48dp"
         />
     <EditText
@@ -24,19 +33,19 @@
         android:layout_marginHorizontal="48dp"
         />
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="@string/register"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:layout_below="@+id/edt_password"
         />
     <TextView
-        android:id="@+id/txt_new_account"
+        android:id="@+id/txt_already_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_here"
+        android:text="@string/already_mem"
         android:textStyle="bold"
         android:textSize="18dp"
         android:layout_alignParentBottom="true"
