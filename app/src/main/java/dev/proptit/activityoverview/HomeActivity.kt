@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
                     Toast.makeText(this, "Successful sending!", Toast.LENGTH_LONG).show()
                 }
                 else{
-                    Toast.makeText(this, "Not.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Not app.", Toast.LENGTH_LONG).show()
                 }
             }
             else{
