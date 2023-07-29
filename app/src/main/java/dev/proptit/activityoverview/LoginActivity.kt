@@ -24,8 +24,16 @@ class LoginActivity : AppCompatActivity() {
             ) {
                 Toast.makeText(this, "Không được để trống thông tin", Toast.LENGTH_SHORT).show()
             } else {
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
+                if (AccountManager.checkAccount(
+                        binding.editEmail.text.toString(),
+                        binding.editPassword.text.toString()
+                    )
+                ) {
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "Sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -35,6 +43,5 @@ class LoginActivity : AppCompatActivity() {
             binding.editEmail.setText(email)
             binding.editPassword.setText(password)
         }
-
     }
 }
